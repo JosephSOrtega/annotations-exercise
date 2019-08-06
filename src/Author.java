@@ -1,9 +1,11 @@
 /**
  * This source file is subject to the license that is bundled with this package in the file LICENSE.
  */
+
 import java.util.ArrayList;
 import java.util.List;
-@SuppressWarnings("deprecation")
+
+@SuppressWarnings("unchecked")
 public class Author extends Person {
     private List books;
 
@@ -16,22 +18,22 @@ public class Author extends Person {
      * @deprecated Use publishedBooks instead
      */
     @Deprecated
-    @SuppressWarnings("unchecked")
     public List<String> getBooks() {
         return books;
     }
-    @SuppressWarnings("unchecked")
+
 
     public List<String> publishedBooks() {
         return books;
     }
-    @SuppressWarnings("unchecked")
+
 
     public void addBook(String book) {
         books.add(book);
     }
 
-    public String sortName() {
+    @Override
+    public String fullname() {
         return String.format("%s, %s", lastName, firstName);
     }
 }
