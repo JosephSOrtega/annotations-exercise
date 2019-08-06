@@ -33,7 +33,7 @@ public class Author extends Person {
     }
 
     @Override
-    public String fullname() {
+    public String fullName() {
         return String.format("%s, %s", lastName, firstName);
     }
 }
